@@ -53,30 +53,30 @@ dependencies {
 # Simple usage
 #### .java
 <pre><code>
-  PersistentCookieStore myCookie= new PersistentCookieStore(context);
+  PersistencesCookies myCookie= new PersistencesCookies(context);
 </code></pre>
 ###### write cookies
 <pre><code>
-  CookieManager cookieManage = new CookieManager(myCookie, CookiePolicy.ACCEPT_ALL)
+  ... cookieJar(myCookie.cookieJar) ...
 </code></pre>
 ###### read cookies
 <pre><code>
-  myCookie.getCookies().get(0).getDomain()
+  myCookie.listCookies().get(0).domain()
 </code></pre>
 </br>
 
 
 #### .kt
 <pre><code>
-  var myCookie: PersistentCookieStore = PersistentCookieStore(context)
+  var myCookie: PersistencesCookies = PersistencesCookies(context)
 </code></pre>
 ###### write cookies
 <pre><code>
-  var cookieManage: CookieManager  = CookieManager(myCookie, CookiePolicy.ACCEPT_ALL)
+ ... cookieJar(myCookie.cookieJar) ...
 </code></pre>
 ###### read cookies
 <pre><code>
-  myCookie.cookies.get(0).domain
+  myCookie.listCookies().get(0).domain()
 </code></pre>
 </br>
 
@@ -85,9 +85,9 @@ dependencies {
 
 #### Example with OkHttp
 <pre><code>
-  OkHttpClient client = new OkHttpClient();
-  client.setConnectTimeout(30, TimeUnit.SECONDS);
-  client.setCookieHandler(new CookieManager(myCookie, CookiePolicy.ACCEPT_ALL)); 
+   val client = OkHttpClient.Builder()
+   .cookieJar(myCookie.cookieJar)
+   .build()
 </code></pre>
 </br>
 
