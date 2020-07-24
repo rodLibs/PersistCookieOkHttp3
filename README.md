@@ -32,7 +32,7 @@ repositories {
 #### Gradle:
 <pre><code>
 dependencies {
-    implementation 'com.github.rodlibs:persistCookiesOkHttp3:1.0'
+    implementation 'com.github.rodlibs:persistCookiesOkHttp3:2.0'
 }
 </code></pre>
 
@@ -42,7 +42,7 @@ dependencies {
  <dependency>
   <groupId>com.github.rodlibs</groupId>
   <artifactId>persistCookiesOkHttp3</artifactId>
-  <version>1.0</version>
+  <version>2.0</version>
   <type>pom</type>
 </dependency>
 ```
