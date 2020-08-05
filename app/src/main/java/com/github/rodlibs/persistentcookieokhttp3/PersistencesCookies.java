@@ -21,7 +21,7 @@ public class PersistencesCookies {
     public PersistencesCookies(Context conte){
         this.context = conte;
         hasCookies = false;
-        listCookies = new ArrayList<Cookie>();
+        listCookies = new ArrayList<>();
         cookieJar = new CookieJar() {
             @Override
             public void saveFromResponse(HttpUrl url, List<Cookie> cookies) {
@@ -98,15 +98,16 @@ public class PersistencesCookies {
 
 
 
-    public List<Cookie> listCookies() {
-        List list = new ArrayList<Cookie>();
-        Cookie cookie = getSharedPreference(getKey());
-        if (cookie != null){
-            list.add(cookie);
-        }
-        return list;
+    public Cookie getCookies() {
+        return getSharedPreference(getKey());
     }
 
+
+
+    public boolean hasCookies(String host){
+        Cookie cookie = getCookies();
+       return cookie != null && host.contains(cookie.domain());
+    }
 
 
 
