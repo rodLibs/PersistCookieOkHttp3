@@ -32,7 +32,7 @@ repositories {
 #### Gradle:
 <pre><code>
 dependencies {
-    implementation 'com.github.rodlibs:persistCookiesOkHttp3:2.0'
+    implementation 'com.github.rodlibs:persistCookiesOkHttp3:2.3'
 }
 </code></pre>
 
@@ -42,7 +42,7 @@ dependencies {
  <dependency>
   <groupId>com.github.rodlibs</groupId>
   <artifactId>persistCookiesOkHttp3</artifactId>
-  <version>2.0</version>
+  <version>2.3</version>
   <type>pom</type>
 </dependency>
 ```
@@ -61,7 +61,11 @@ dependencies {
 </code></pre>
 ###### read cookies
 <pre><code>
-  myCookie.listCookies().get(0).domain()
+  myCookie.getCookies().domain()
+</code></pre>
+###### has cookies
+<pre><code>
+  myCookie.hasCookies(String host)
 </code></pre>
 </br>
 
@@ -76,7 +80,12 @@ dependencies {
 </code></pre>
 ###### read cookies
 <pre><code>
-  myCookie.listCookies().get(0).domain()
+  myCookie.getCookies().domain()
+</code></pre>
+</br>
+###### has cookies
+<pre><code>
+  myCookie.hasCookies(String host)
 </code></pre>
 </br>
 
