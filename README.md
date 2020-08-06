@@ -82,7 +82,6 @@ dependencies {
 <pre><code>
   myCookie.getCookies().domain()
 </code></pre>
-</br>
 ###### has cookies
 <pre><code>
   myCookie.hasCookies(String host)
