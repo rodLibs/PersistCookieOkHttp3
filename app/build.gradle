@@ -3,7 +3,7 @@ apply plugin: 'com.android.library'
 ext {
     PUBLISH_GROUP_ID = 'com.github.rodlibs'
     PUBLISH_ARTIFACT_ID = 'persistCookiesOkHttp3'
-    PUBLISH_VERSION = '2.3'
+    PUBLISH_VERSION = '2.4'
 }
 
 android {
