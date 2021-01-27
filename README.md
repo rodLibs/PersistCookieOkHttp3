@@ -38,12 +38,14 @@ dependencies {
 
 
 #### Maven:
+```xml
  <dependency>
   <groupId>com.github.rodlibs</groupId>
   <artifactId>persistCookiesOkHttp3</artifactId>
   <version>2.4</version>
   <type>pom</type>
 </dependency>
+```
 </br>
 </br>
 
