@@ -35,6 +35,7 @@ public class PersistencesCookies {
             public List<Cookie> loadForRequest(HttpUrl url) {
                 Cookie cookie = getSharedPreference(url.host());
                 if (cookie != null) {
+                    listCookies.clear();
                     listCookies.add(cookie);
                     hasCookies = true;
                 }
