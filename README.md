@@ -19,9 +19,7 @@ The Gradle dependency is available via maven. maven is the default Maven reposit
 ## Add repository
 <pre><code>
 repositories {
-    maven {
-        url  "https://dl.bintray.com/rod120/persistCookiesOkHttp3" 
-    }
+    maven { url 'https://jitpack.io' }
 }
 </code></pre>
 
@@ -32,7 +30,7 @@ repositories {
 #### Gradle:
 <pre><code>
 dependencies {
-    implementation 'com.github.rodlibs:persistCookiesOkHttp3:2.4'
+    implementation 'com.github.rodLibs:PersistCookieOkHttp3:master-SNAPSHOT'
 }
 </code></pre>
 </br>
